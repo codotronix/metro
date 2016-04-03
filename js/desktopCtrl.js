@@ -250,7 +250,7 @@ function tilify (tiles) {
     }
     
     var timeout_id = 0;
-    var hold_time = 1000;
+    var hold_time = 2500;
     /*
     * Code for Tap and Hold on a Tile
     */
