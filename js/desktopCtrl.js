@@ -65,7 +65,7 @@ function tilify (tiles) {
             
         } else {
             page_Width_Class = 'xs';    
-            small_tile_size = Math.floor(tiles_Container_width / 8);
+            small_tile_size = Math.floor(tiles_Container_width / 4);
         }
         
         medium_tile_size = small_tile_size * 2;
@@ -250,7 +250,7 @@ function tilify (tiles) {
     }
     
     var timeout_id = 0;
-    var hold_time = 700;
+    var hold_time = 1000;
     /*
     * Code for Tap and Hold on a Tile
     */
