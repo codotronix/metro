@@ -1,0 +1,59 @@
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.tiles-container {
+    margin: 15px;
+}
+
+.tile {
+    list-style: none;
+    float: left;
+    display: block;
+/*    border: 1px solid #000;*/
+    text-align: center;
+    padding: 5px;
+    float: left;
+    position: relative;
+}
+
+.tile .tileInnerContainer {
+    border: 1px solid #00F;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.xs .tile {
+    padding: 1px;
+}
+
+.sm .tile {
+    padding: 3px;
+}
+
+.md .tile {
+    padding: 4px;
+}
+
+.s2mC,
+.m2bC {
+    float: left;
+}
+
+/*
+.lg .tile.big {
+    height: 400px;
+    width: 400px;
+}
+
+.lg .tile.medium {
+    height: 200px;
+    width: 200px;
+}
+
+.lg .tile.small {
+    height: 100px;
+    width: 100px;
+}*/
