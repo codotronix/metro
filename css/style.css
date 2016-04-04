@@ -3,8 +3,14 @@ ul {
     margin: 0;
 }
 
-.tiles-container {
-    margin: 15px 0;
+label {
+    font-weight: normal;
+}
+
+.s2mC,
+.m2bC {
+    float: left;
+    position: relative;
 }
 
 .tile {
@@ -18,11 +24,17 @@ ul {
     position: relative;
 }
 
+
+.tiles-container {
+    margin: 15px 0;
+}
+
 .tile .tileInnerContainer {
-    border: 1px solid #00F;
+/*    border: 1px solid #00F;*/
     height: 100%;
     width: 100%;
     display: block;
+    position: relative;
 }
 
 .xs .tile {
@@ -37,9 +49,39 @@ ul {
     padding: 4px;
 }
 
-.s2mC,
-.m2bC {
-    float: left;
+.tile .name {
+    display: block;
+    text-overflow: ellipsis;
+    height: 20px;
+    overflow: hidden;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255,255,255,.3);
+    color: #FFF;
+    font-size: 13px;
+}
+
+.tile .fontIcon {
+    font-size: 150px;
+    margin-top: 60px;
+    color: #FFF;
+}
+
+.tile.medium .fontIcon {
+    font-size: 50px;
+    margin-top: 40px;
+}
+
+.tile.small .fontIcon {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.tile.medium .fontIcon {
+    font-size: 50px;
+    margin-top: 40px;
 }
 
 /*

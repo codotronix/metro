@@ -99,9 +99,20 @@ function tilify (tiles) {
     * This function will take a tile, and return tile-HTML-String 
     */
     function makeTileHtml (tile) {
-        var tileHtml =  '<div class="ui-state-default tile ' + tile.size + ' real" id="' + tile.id + '" draggable="true">'
-                     +     '<div class="tileInnerContainer">'
-                     +         tile.name
+        tile.bgColor = tile.bgColor || '#000';
+        var tileHtml =  '<div class="ui-state-default tile ' + tile.size + ' real" id="' + tile.id + '" title="' + tile.name + '">'
+                     +     '<div class="tileInnerContainer" style="background:' + tile.bgColor + '">';
+        
+        if(tile.iconType == "font") {
+            tileHtml +=         '<span class="fontIcon ' + tile.icon + '"></span>';                                    
+        }
+        
+        
+        
+        
+             tileHtml+=         '<label class="name">'
+                     +              tile.name
+                     +          '</label>'
                      +     '</div>'
                      + '</div>';
         
@@ -121,7 +132,6 @@ function tilify (tiles) {
             for (var i=0; i<noOfDummyTiles; i++) {
                 var dummyTileHtml =  '<div class="tile small dummy">'
                                     +     '<div class="tileInnerContainer">'
-                                    +         "dS" + i
                                     +     '</div>'
                                     + '</div>'; 
                 smallTiles.push(dummyTileHtml);
@@ -162,7 +172,7 @@ function tilify (tiles) {
         }      
         
         //var no_s2mC = 1;
-        var m2bC = '<div class="m2bC">';            //m2bC stands for "medium to big container"
+        var m2bC = '<div class="m2bC">';            //m2bC stands for "medium to big container"                        
         for(var i=0; i<mediumTiles.length; i++) {
             m2bC += mediumTiles[i];
             
@@ -180,8 +190,12 @@ function tilify (tiles) {
     */
     function addToDOM () {    
         $('.tiles-container').html(shuffleTiles(bigTiles));
-        //$('.tiles-container').append(shuffleTiles(mediumTiles));
-        //$('.tiles-container').append(shuffleTiles(smallTiles));
+        
+        //on xs devices we will not group mediums to make big
+        if(page_Width_Class == "xs") {
+            $('.tiles-container').append(shuffleTiles(mediumTiles));
+        }
+        
     }
     
     
@@ -231,8 +245,9 @@ function tilify (tiles) {
         initVars();
         calculateWidths();
         categorizeTiles();        
-        groupSmallsToMedium();        
-        groupMediumToBig();
+        groupSmallsToMedium();
+        //on xs devices we will not group mediums to make big
+        if(page_Width_Class != "xs") {groupMediumToBig();}        
         addToDOM();
         applyTileSize();
         initDragging();
@@ -249,7 +264,8 @@ function tilify (tiles) {
     * This function initiates jq-ui-dragging on tiles-container
     */
     function initDragging () {
-        $( ".tiles-container, .m2bC" ).sortable();
+        $( ".tiles-container, .m2bC, .s2mC" ).sortable();
+        //$('.s2mC').append('<div class="handle" style="position:absolute;left:5px;right:5px;top:3px;height:15px;background:rgba(0,55,120,.5);"></div>')
     }
     
     var timeout_id = 0;

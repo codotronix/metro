@@ -1,102 +1,147 @@
 [
     {
         "id": "tile1",
-        "name": "1",
-        "size": "small"
+        "name": "Edge",
+        "size": "small",
+        "iconType": "font",
+        "icon": "fa fa-edge",
+        "bgColor": "steelblue"
     },
     {
         "id": "tile2",
-        "name": "2",
-        "size": "small"
+        "name": "Font Awesome",
+        "size": "small",
+        "iconType": "font",
+        "icon": "fa fa-fort-awesome"
     },
     {
         "id": "tile3",
-        "name": "3",
-        "size": "small"
+        "name": "Shop",
+        "size": "small",
+        "iconType": "font",
+        "icon": "fa fa-shopping-basket"
     },
     {
         "id": "tile4",
-        "name": "4",
-        "size": "small"
+        "name": "Calculator",
+        "size": "small",
+        "iconType": "font",
+        "icon": "fa fa-calculator"
     },
     {
         "id": "tile5",
-        "name": "5",
-        "size": "medium"
+        "name": "Calendar",
+        "size": "medium",
+        "iconType": "font",
+        "icon": "fa fa-calendar"
     },
     {
         "id": "tile6",
-        "name": "6",
-        "size": "small"
+        "name": "Taxi App",
+        "size": "small",
+        "iconType": "font",
+        "icon": "fa fa-taxi"
     },
     {
         "id": "tile7",
-        "name": "7",
-        "size": "small"
+        "name": "My Cloud",
+        "size": "small",
+        "iconType": "font",
+        "icon": "fa fa-cloud"
     },
     {
         "id": "tile8",
-        "name": "8",
-        "size": "small"
+        "name": "Island Chat",
+        "size": "small",
+        "iconType": "font",
+        "icon": "fa fa-commenting-o",
+        "bgColor": "slateblue"
     },
     {
         "id": "tile9",
-        "name": "9",
-        "size": "big"
+        "name": "Github",
+        "size": "big",
+        "iconType": "font",
+        "icon": "fa fa-github",
+        "bgColor": "#0A5231"
     },
     {
         "id": "tile10",
-        "name": "10",
-        "size": "small"
+        "name": "Facebook",
+        "size": "small",
+        "iconType": "font",
+        "icon": "fa fa-facebook-square"
     },
     {
         "id": "tile11",
-        "name": "11",
-        "size": "medium"
+        "name": "Offersplus",
+        "size": "medium",
+        "iconType": "font",
+        "icon": "fa fa-shopping-bag"
     },
     {
         "id": "tile12",
-        "name": "12",
-        "size": "small"
+        "name": "Mini Puzzle",
+        "size": "small",
+        "iconType": "font",
+        "icon": "fa fa-puzzle-piece",
+        "bgColor": "orangered"
     },
     {
         "id": "tile13",
-        "name": "13",
-        "size": "small"
+        "name": "Flight App",
+        "size": "small",
+        "iconType": "font",
+        "icon": "fa fa-plane"
     },
     {
         "id": "tile14",
-        "name": "14",
-        "size": "medium"
+        "name": "My Music",
+        "size": "medium",
+        "iconType": "font",
+        "icon": "fa fa-music"
     },
     {
         "id": "tile15",
-        "name": "15",
-        "size": "big"
+        "name": "Medical App",
+        "size": "big",
+        "iconType": "font",
+        "icon": "fa fa-heartbeat",
+        "bgColor": "red"
     },
     {
         "id": "tile16",
-        "name": "16",
-        "size": "small"
+        "name": "Planet App",
+        "size": "small",
+        "iconType": "font",
+        "icon": "fa fa-globe"
     },
     {
         "id": "tile17",
-        "name": "17",
-        "size": "small"
+        "name": "My Videos",
+        "size": "small",
+        "iconType": "font",
+        "icon": "fa fa-film"
     },
     {
         "id": "tile18",
-        "name": "18",
-        "size": "small"
+        "name": "My Pictures",
+        "size": "small",
+        "iconType": "font",
+        "icon": "fa fa-file-image-o"
     },
     {
         "id": "tile19",
-        "name": "19",
-        "size": "medium"
+        "name": "Message Box",
+        "size": "medium",
+        "iconType": "font",
+        "icon": "fa fa-envelope"
     },
     {
         "id": "tile20",
-        "name": "20",
-        "size": "small"
+        "name": "linkedin",
+        "size": "small",
+        "iconType": "font",
+        "icon": "fa fa-linkedin-square"
     }
 ]
