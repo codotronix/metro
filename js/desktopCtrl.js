@@ -26,6 +26,7 @@ function tilify (tiles) {
     var smallTiles = [];
     var mediumTiles = [];
     var bigTiles = [];
+    var page_Width_Class = 'xs';
     
     //console.log($('.tiles-container').width());
     
@@ -46,8 +47,8 @@ function tilify (tiles) {
     * calculate height and width of the tiles depending on the tiles_container width
     */
     function calculateWidths () {
-        var tiles_Container_width = $('.tiles-container').width();
-        var page_Width_Class = 'xs';
+        var tiles_Container_width = $('.tiles-container').width() - 17;     //17px = width of scrollbar
+        page_Width_Class = 'xs';
         var all_Possible_Width_Classes = 'xs sm md lg';
         
         small_tile_size = Math.floor(tiles_Container_width / 12);
@@ -145,6 +146,7 @@ function tilify (tiles) {
     * after balancing the xtra/residue medium tiles with dummy tiles
     */
     function groupMediumToBig () {
+        mediumTiles = shuffleTiles(mediumTiles);
         var residueMediumTiles = mediumTiles.length % 4;
         if(residueMediumTiles != 0) {
             var noOfDummyTiles = 4 - residueMediumTiles;            
@@ -176,9 +178,10 @@ function tilify (tiles) {
     /*
     * This function adds Everything to DOM
     */
-    function addToDOM () {        
-        $('.tiles-container').html(bigTiles);
-        $('.tiles-container').append(shuffleTiles(mediumTiles));
+    function addToDOM () {    
+        $('.tiles-container').html(shuffleTiles(bigTiles));
+        //$('.tiles-container').append(shuffleTiles(mediumTiles));
+        //$('.tiles-container').append(shuffleTiles(smallTiles));
     }
     
     
@@ -227,13 +230,13 @@ function tilify (tiles) {
     function doTilify () {
         initVars();
         calculateWidths();
-        categorizeTiles();
-        groupSmallsToMedium();
-        //groupMediumToBig();
+        categorizeTiles();        
+        groupSmallsToMedium();        
+        groupMediumToBig();
         addToDOM();
         applyTileSize();
-        //initDragging();
-        tapNHoldTile();
+        initDragging();
+        //tapNHoldTile();
     }
     
     doTilify();
@@ -246,7 +249,7 @@ function tilify (tiles) {
     * This function initiates jq-ui-dragging on tiles-container
     */
     function initDragging () {
-        $( ".tiles-container" ).sortable();
+        $( ".tiles-container, .m2bC" ).sortable();
     }
     
     var timeout_id = 0;
